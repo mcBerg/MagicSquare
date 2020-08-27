@@ -36,20 +36,24 @@ public class MagicSquare {
   }
 
   private boolean checkEquals(int[][] inputArray) {
+    // get the sum for a row
     int row = Arrays.stream(inputArray[0]).sum();
 
+    // get the sum for a column
     int[] column = new int[inputArray.length];
     for (int i = 0; i < inputArray.length; i++) {
       System.arraycopy(inputArray[i], 0, column, i, 1);
     }
     int col = Arrays.stream(column).sum();
 
+    // get the sum for a diagonal
     int[] diagonal = new int[inputArray.length];
     for (int i = 0; i < inputArray.length; i++) {
       System.arraycopy(inputArray[i], i, diagonal, i, 1);
     }
     int diag = Arrays.stream(diagonal).sum();
 
+    // compare
     return row == col && col == diag;
   }
 
