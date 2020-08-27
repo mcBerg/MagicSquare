@@ -53,7 +53,7 @@ public class MagicSquareTest {
   }
 
   @Test
-  public void checkTrickySquareisNotMagicSquare() {
+  public void checkTrickySquareIsNotMagicSquare() {
     assertFalse(magicSquare.isMagicSquare(trickySquare));
   }
 }
